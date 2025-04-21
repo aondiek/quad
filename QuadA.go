@@ -12,15 +12,15 @@ func QuadA(x, y int) {
 		/*loop over each column in the current row, from left to right*/
 		for j := 0; j < x; j++ {
 			switch {
-			/*top corners, if it is the first row and first or last column, print 'A'*/
+			/*top corners, if it is the first row and first or last column, print '0'*/
 			case (i == 0 && (j == 0 || j == x-1)):
-				fmt.Print("A")
-			/*bottom corners, if it's the last row and first or last column, print 'C'*/
+				fmt.Print("0")
+			/*bottom corners, if it's the last row and first or last column, print '0'*/
 			case (i == y-1 && (j == 0 || j == x-1)):
-				fmt.Print("C")
-			/*edges excluding corners, print 'B'*/
+				fmt.Print("0")
+			/*edges excluding corners, print '-'*/
 			case (i == 0 || i == y-1 || j == 0 || j == x-1):
-				fmt.Print("B")
+				fmt.Print("-")
 			/*inside of the rectangle, print a space*/
 			default:
 				fmt.Print(" ")
